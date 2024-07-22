@@ -10,7 +10,7 @@ Docker file, Yum repository for CentOS 7.
 
 ~~~bash
 docker build \ 
--t image.registry/yumrepo:0.1
+-t leehuynhfvn/yumrepo:0.1
 ~~~
 
 - Build with proxy
@@ -33,7 +33,7 @@ docker run -d \
     -v /u01/repo.total:/repo.def \
     -p 8084:80 \
     --name=centos7yum \
-    "image.registry/yumrepo:0.1"
+    "leehuynhfvn/yumrepo:0.1"
 ~~~
 
 `/repo`: RPMs path, we can map it to an external volume to make it persistent
