@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  centos7yum:
+    image: leehuynhfvn/yumrepo:0.1
+    container_name: centos7yum
+    volumes:
+      - ./repo.data:/repo
+    restart: unless-stopped
+
+volumes:
+  repo.data:
