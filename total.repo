@@ -42,9 +42,12 @@ baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
 
 [epel]
 name=Extra Packages for Enterprise Linux 7 - $basearch
-gpgcheck=0
 #baseurl=http://download.fedoraproject.org/pub/epel/7/$basearch
-mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch
+metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch
+failovermethod=priority
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 
 
 [nginx]
