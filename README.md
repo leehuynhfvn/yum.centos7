@@ -19,7 +19,7 @@ docker build \
 docker build \ 
 --build-arg http_proxy=web.proxy:8080 \
 --build-arg https_proxy=web.proxy:8080 \
--t image.registry/yumrepo:0.1
+-t leehuynhfvn/yumrepo:0.1
 ~~~
 
 ### Run
