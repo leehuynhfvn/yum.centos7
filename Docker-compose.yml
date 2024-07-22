@@ -7,6 +7,12 @@ services:
     volumes:
       - ./repo.data:/repo
     restart: unless-stopped
+    networks:
+      - nginx-proxy-manager_default
 
-volumes:
-  repo.data:
+networks:
+  nginx-proxy-manager_default:
+    external: true
+
+# volumes:
+#   repo.data:
